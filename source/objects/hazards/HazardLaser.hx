@@ -60,10 +60,10 @@ class HazardLaser extends Hazard
 				var ori = new FlxPoint(x, y);
 				var dest = new FlxPoint(x, FlxG.height);
 			
-			    ori.x =  U.clamp(ori.x, x, FlxG.width);
-				ori.y = U.clamp(ori.y, y, FlxG.height);
-				dest.x = U.clamp(dest.x, x, FlxG.width);
-				dest.y = U.clamp(dest.y, y, FlxG.height-14);
+			    ori.x =  FlxMath.bound(ori.x, x, FlxG.width);
+				ori.y = FlxMath.bound(ori.y, y, FlxG.height);
+				dest.x = FlxMath.bound(dest.x, x, FlxG.width);
+				dest.y = FlxMath.bound(dest.y, y, FlxG.height-14);
 				
 			
 				
